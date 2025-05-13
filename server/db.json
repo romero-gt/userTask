@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Carlos"
+    },
+    {
+      "id": "2",
+      "name": "Ana"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Estudar React",
+      "completed": false,
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Criar projeto com JSON Server",
+      "completed": true,
+      "userId": "2"
+    },
+    {
+      "id": "5384",
+      "title": "Estudar Hooks",
+      "completed": false,
+      "userId": "1"
+    }
+  ]
+}
