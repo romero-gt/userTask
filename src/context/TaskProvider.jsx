@@ -5,7 +5,7 @@ export const TaskContext = createContext();
 
 export function TaskProvider({ children }) {
     const [user, setUser] = useState(null);
-    const [task, setTask] = useState([]);
+    const [tasks, setTasks] = useState([]);
     const [userId, setUserId] = useState("1");
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export function TaskProvider({ children }) {
             setUser(userRes.data);
     
             const taskRes = await axios.get(`/tasks?userId=${userId}`);
-            setTask(taskRes.data);
+            setTasks(taskRes.data);
         }
         fetchUserAndTask();
     }, [userId]);
@@ -25,11 +25,22 @@ export function TaskProvider({ children }) {
             completed: false,
             userId
         });
-        setTask(prev => [...prev, response.data])
+        setTasks(prev => [...prev, response.data])
+    }
+
+    const toggleTask = async (task) => {
+        const updated = { ...task, completed: !task.completed };
+        await axios.patch(`/tasks/${task.id}`, { completed: updated.completed });
+        setTasks(prev => prev.map(t => (t.id === task.id ? updated: t)));
+    }
+
+    const removeTask = async (id) => {
+        await axios.delete(`tasks/${id}`);
+        setTasks(prev => prev.filter(t => t.id !== id));
     }
 
     return (
-        <TaskContext.Provider value={{addTask}}>
+        <TaskContext.Provider value={{user, tasks, setUserId, addTask, toggleTask, removeTask}}>
             {children}
         </TaskContext.Provider>
     );

@@ -1,10 +1,12 @@
-import { useContext, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { TaskContext } from "../context/TaskProvider";
 
 const TaskForm = () => {
     const [title, setTitle] = useState("");
     const { addTask } = useContext(TaskContext);
     const inputRef = useRef();
+
+    useEffect(() => inputRef.current.focus(), []);
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -14,7 +16,6 @@ const TaskForm = () => {
       setTitle("");
     }
 
-    console.log(title);
   return (
     <form onClick={handleSubmit} className="task-form">
         <input

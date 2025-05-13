@@ -11,12 +11,6 @@
   ],
   "tasks": [
     {
-      "id": "1",
-      "title": "Estudar React",
-      "completed": false,
-      "userId": "1"
-    },
-    {
       "id": "2",
       "title": "Criar projeto com JSON Server",
       "completed": true,
@@ -25,6 +19,12 @@
     {
       "id": "5384",
       "title": "Estudar Hooks",
+      "completed": true,
+      "userId": "1"
+    },
+    {
+      "id": "0775",
+      "title": "Passear com dog",
       "completed": false,
       "userId": "1"
     }
