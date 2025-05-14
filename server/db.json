@@ -7,15 +7,17 @@
     {
       "id": "2",
       "name": "Ana"
+    },
+    {
+      "id": "3",
+      "name": "Renato"
+    },
+    {
+      "id": "4",
+      "name": "Flávia"
     }
   ],
   "tasks": [
-    {
-      "id": "2",
-      "title": "Criar projeto com JSON Server",
-      "completed": true,
-      "userId": "2"
-    },
     {
       "id": "5384",
       "title": "Estudar Hooks",
@@ -27,6 +29,24 @@
       "title": "Passear com dog",
       "completed": false,
       "userId": "1"
+    },
+    {
+      "id": "7610",
+      "title": "revisar código",
+      "completed": false,
+      "userId": "4"
+    },
+    {
+      "id": "e154",
+      "title": "Testar botão de login",
+      "completed": true,
+      "userId": "2"
+    },
+    {
+      "id": "ead2",
+      "title": "Testar responsividade",
+      "completed": false,
+      "userId": "2"
     }
   ]
 }
