@@ -55,8 +55,14 @@ const AuthProvider = ({children}) => {
         }
     }
 
+    const logout = () => {
+        localStorage.clear();
+        setUser(null);
+        navigate("/");
+    }
+
   return (
-    <AuthContext.Provider value={{user, login, loading}}>
+    <AuthContext.Provider value={{user, login, loading, logout}}>
         {children}
     </AuthContext.Provider>
   )
