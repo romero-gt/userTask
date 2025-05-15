@@ -27,7 +27,7 @@ const Login = () => {
         <Typography variant='h5' align='center' gutterBottom>
             Login
         </Typography>
-        <Box component="form" onSubmit={handleSubmit}>
+        <Box component="form" onSubmit={handleSubmit} sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
             <TextField
                 label="Usuário"
                 variant='outlined'
@@ -38,6 +38,7 @@ const Login = () => {
             <TextField
                 label="Senha"
                 variant='outlined'
+                type='password'
                 fullWidth
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

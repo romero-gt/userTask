@@ -8,10 +8,8 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f2f4f8;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* Layout centralizado */
